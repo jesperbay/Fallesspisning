@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="3eb059c5-8f12-4181-a755-bbfcecf5ab35" name="Klassediagram" linkedPackageId="af761593-163f-4717-9f63-21bfbe09685a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="001c8a54-b05d-4ba9-87cb-ac58d9a78360" name="namespace" profile="CSharpProfile">
+      <elementDefinition Id="a264cde9-3732-4a26-b769-061d5794505c" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="17f694a4-10be-46b3-aeb9-70cf49d00088">
+          <propertyInstance Id="a4e950e5-ef14-4d1c-91ee-8ea72600649d" name="BaseName">
+            <elementDefinition Id="e1aafb2d-6e66-4264-816d-fe73ecc630ae" />
+          </propertyInstance>
+          <elementDefinition Id="13557973-7f40-46e6-a052-424c59f99237" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="9c6d8e9e-33c4-4e29-a1b6-21fd14cd11ed">
+          <propertyInstance Id="7cb5bc5b-9528-4d94-bbd5-207677182608" name="ClrAttributes">
+            <elementDefinition Id="a822dda2-708a-4418-82b2-e9f2fe1b75dc" />
+          </propertyInstance>
+          <elementDefinition Id="d3ff9cd6-0ef4-4e0a-a6b6-1a5cee1b4f1b" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="c581f0cc-63c0-4f83-95d9-21019e64bae9">
+          <propertyInstance Id="0247493e-f8eb-4729-ab50-719c2ebec270" name="Usings">
+            <elementDefinition Id="c0f343ed-437e-4b76-8fc5-54014bfc0ae2" />
+          </propertyInstance>
+          <elementDefinition Id="db4961d2-72f4-49a1-a943-cce634a22b6a" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance Id="a8df88d1-44e5-460d-adbc-a6621c4c45bd" name="TextTemplateBindings" profile="TextTemplateBindings">
+      <elementDefinition Id="90d22cbf-1472-4742-8449-ab6133d21a4b" />
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="07a06b40-f758-4531-b463-3ed0dee9369a">
+          <propertyInstance Id="8223f441-ec5d-4897-bd0c-6b4f794682da" name="Alias" value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate">
+            <elementDefinition Id="28299363-e0de-4ffe-ac2c-ce04512849ae" />
+          </propertyInstance>
+          <elementDefinition Id="62898974-9496-4277-8cea-cdcfae1931a9" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="f825a524-f586-4c78-a395-e11f484baad4">
+          <propertyInstance Id="1c78e4a7-5fd8-4369-ba05-653130678a0b" name="TemplateFilePath" value="ClassTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 14.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4">
+            <elementDefinition Id="a4907088-b6f9-416e-817f-95a612e4bd01" />
+          </propertyInstance>
+          <elementDefinition Id="3b97b65c-e518-4907-b3e1-f6e30113fa29" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="5ce707d2-3ceb-4e9a-930d-c1863e8bd426">
+          <propertyInstance Id="17955605-73a1-4a37-8135-55625c36d1e4" name="ProjectPath" value="ClassTemplate=..\KlassediagramLib\KlassediagramLib.csproj|EnumTemplate=..\KlassediagramLib\KlassediagramLib.csproj|InterfaceTemplate=..\KlassediagramLib\KlassediagramLib.csproj|StructTemplate=..\KlassediagramLib\KlassediagramLib.csproj">
+            <elementDefinition Id="4d1c507e-e656-49fb-9840-3c72b694a881" />
+          </propertyInstance>
+          <elementDefinition Id="1083159a-aadb-4dff-8d9f-6088d51e3d9e" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="9d5071ff-c74e-4429-be8b-57a3c9277c15">
+          <propertyInstance Id="435bbd3c-cc46-4cec-8379-c4091260427b" name="TargetDirectory" value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}">
+            <elementDefinition Id="4a85fecd-87e4-4816-becf-dbd3a0579c19" />
+          </propertyInstance>
+          <elementDefinition Id="48db76af-4a6e-4d9c-b120-7db44bce2c1f" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="04483082-db27-443e-8cd1-aefb6b8d3c83">
+          <propertyInstance Id="972692c0-6d44-4029-9a6d-169066acb528" name="TargetName" value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}">
+            <elementDefinition Id="0f518e46-b2d4-4655-8950-c3b4cd880476" />
+          </propertyInstance>
+          <elementDefinition Id="ee315678-20db-4179-8714-a069debbf051" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="e7d951e0-f5ab-404c-b027-5b22f9c0fd5a">
+          <propertyInstance Id="bf3d51f7-0134-48f4-bdc4-c45a23d33d30" name="Overwrite" value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True">
+            <elementDefinition Id="8ef16d24-6db9-434a-aac1-8da99891286b" />
+          </propertyInstance>
+          <elementDefinition Id="41363dca-553c-4487-8a6e-2f12e1ba4479" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances Id="5e7b26cd-a2ba-4f67-88b2-14431b644e22">
+          <propertyInstance Id="cf339ff3-ee7c-4b7b-9b69-387b2b7665a6" name="Parameters">
+            <elementDefinition Id="fbd924c8-3cee-43d3-b4a2-6e90673c8cdd" />
+          </propertyInstance>
+          <elementDefinition Id="226b89b0-88c5-47e5-82fa-4e493dd54c81" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="7fcdeb24-5df9-4cf0-a501-a02522f425e6">
+      <profileInstance Id="26745618-9d65-497d-ae73-7ee87a26cb30" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="2a794ca4-7996-4c8e-9f50-59e55f9a7f6e">
+      <profileInstance Id="8239abf4-1e63-42b0-93da-42f4e8682ccf" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="4f55b693-8893-4446-afdd-4e2c566b7a1c">
+      <profileInstance Id="2ce2e208-2b40-4ab7-bf64-d4bdd926c216" name="CSharpProfile">
+        <elementDefinition Id="2b78fed7-a952-4473-88c0-739814657abc" />
+      </profileInstance>
+      <elementDefinition Id="bb2ffb8f-951b-4df9-a486-f16988b56c77" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="212693d1-3a6b-422a-ac98-7da74b67ccc9">
+      <profileInstance Id="932019bb-e210-4a5b-ba8b-a28ecf9d2230" name="TextTemplateBindings">
+        <elementDefinition Id="d6e25006-08a1-4a95-9848-46d23197f1e0" />
+      </profileInstance>
+      <elementDefinition Id="d033132e-f930-4620-8c8b-72beccb11ea0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e867e8a2-c4c7-4533-8f70-c5117444af13" name="Beborere" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bec02c29-7f0a-4bb6-b6a4-9c39bbe61dcc" />
+        <generalsInternal>
+          <generalization Id="a0c4516d-1704-4033-87e9-3605280a0251" isSubstitutable="false">
+            <classMoniker Id="1f0baa03-8e30-4ad9-8f0c-e68f9c6b6232" LastKnownName="hus" />
+            <elementDefinition Id="3135f92e-fadb-416f-b247-1a39794cc645" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="29401763-652d-4045-9d06-fe90038d1360" isDerived="false" sourceEndRoleName="Beborere" targetEndRoleName="Opgaver" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1b4cd27c-240d-4a79-abfd-f79eda3d31fb" LastKnownName="Opgaver" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aea951ef-3791-4cc9-af0a-a905414d6bef" name="Beborere" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="80777f02-bf01-4ea6-b1da-e29df8fb6399" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1b5964b9-de18-473a-a07a-907f10a7170e" name="Opgaver" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="18bdfe46-5f38-47cc-a809-f50b129e8546" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="291a4d8b-ff42-4250-b057-e469dd32eb96" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="32cc0165-9fae-477d-8e7f-09e9a2d03f8a" name="Navn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="72d0bd86-5341-4a49-8170-08ca2e9eacd7" />
+          </property>
+          <property Id="ef6a8b32-0b6e-43e5-a13d-a986daac9845" name="Alder" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="875b51d3-2cbd-42b2-adb9-447b428a534f" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1f0baa03-8e30-4ad9-8f0c-e68f9c6b6232" name="hus" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="76f15629-75e0-40b9-ba4d-66d09b4c128c" />
+        <targetEnds>
+          <association Id="6ecb93f6-4bb7-4a18-bfb6-f658c30cd31b" isDerived="false" sourceEndRoleName="hus" targetEndRoleName="Tilmedling" isLeaf="false" isAbstract="false">
+            <classMoniker Id="4cf8322c-9752-4573-ae51-3daf47025016" LastKnownName="Tilmedling" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="05be6bff-a934-4e26-a201-88e8c2e22112" name="hus" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cd72598a-fa2c-429c-b3ed-788d622fb503" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7ebc0ae2-e8b6-49f2-b95b-8e86c52bb3b0" name="Tilmedling" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b2a7a3e0-8a13-4b9e-8e39-fd0f68ee6608" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f4a68d2b-4004-4f25-b393-9a872492a892" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="d6efd889-30c3-47d3-b5f7-c7f71e708b76" name="Nr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="73c8d382-e15e-4e6e-8c7e-b50f83f2154c" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4f679b51-38c8-4896-ba04-d9856e430849" name="Gæst" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e29e793f-9e77-4a7c-a435-c50c847bf44a" />
+        <targetEnds>
+          <association Id="701556d6-6adb-487c-bd90-4533e9cdd844" isDerived="false" sourceEndRoleName="Gæst" targetEndRoleName="hus" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1f0baa03-8e30-4ad9-8f0c-e68f9c6b6232" LastKnownName="hus" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2f06a968-25d3-4a6d-a17d-3db0cd3602cd" name="Gæst" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="70d4aebb-41fa-4c7f-bd8c-7e039a7e6174" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="49089ce0-0acd-4bd1-8d4e-23bd8064ee74" name="hus" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="60890d41-adb0-4f92-bd65-b58308b2a470" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="925fd93e-4374-4cda-9ab1-57abd7ece601" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="dba47fc4-96e8-4fd7-8718-de4d05024f60" name="Voksen" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a3e89ce5-7825-4690-8e02-a285fe082cc5" />
+          </property>
+          <property Id="37473cd5-f47e-4f16-bb9d-7d6f0f379b2d" name="Barn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b252f79f-9a32-4ea4-9fcc-6988f2878795" />
+          </property>
+          <property Id="db8218d9-e2cc-48c5-b680-f4a7ea3e22eb" name="Ung" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7102bff0-8096-4fd4-972b-d0d7520f5272" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4cf8322c-9752-4573-ae51-3daf47025016" name="Tilmedling" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9d7a997a-5f5d-4274-9e78-f08a92b182f4" />
+        <targetEnds>
+          <association Id="ec2a18a7-ede5-4814-9ca9-d9e532ee9076" isDerived="false" sourceEndRoleName="Tilmedling" targetEndRoleName="Måltid" isLeaf="false" isAbstract="false">
+            <classMoniker Id="f9e2e685-b44d-4e42-a623-a4445fa9a349" LastKnownName="Måltid" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="55a1511f-6569-487f-b86a-38f8f231cea5" name="Tilmedling" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b78e1475-3e71-43b7-8cd4-9eb86918eee6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="72e44d5c-3b12-4e3e-a3ca-ebee09c0a32b" name="Måltid" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3a41082d-6119-4d63-b0bd-6d6619c4d6ce" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e6f2081d-6517-426d-ad6c-25d50a3d67c1" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="1a206df9-25d2-4992-9760-31e678202494" name="List pris" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6b1d57e4-b30c-4db1-bf21-d45f2028dc15" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f9e2e685-b44d-4e42-a623-a4445fa9a349" name="Måltid" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0130eb20-97d3-4a44-9e0a-c1d4b3a24f78" />
+        <ownedAttributesInternal>
+          <property Id="61140dec-e9a9-4073-ad67-d3c1d3268d29" name="Udgift" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="75ade45a-b8c8-4fa4-81a5-2ae81552cacb" />
+          </property>
+          <property Id="da294361-19f9-42bc-bb99-22c715c14ddb" name="Mad kalender" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="375103c2-dece-4a4f-a71d-0a4f498d7bdd" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f999459e-b1d1-45f3-b3d2-7e376ba947ae" name="Udbetaling" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ef1eb20a-899a-4ba1-a1b8-333cfa9bb6e2" />
+        <generalsInternal>
+          <generalization Id="213963d2-8410-4370-986e-0bcf2fe97b74" isSubstitutable="false">
+            <classMoniker Id="f9e2e685-b44d-4e42-a623-a4445fa9a349" LastKnownName="Måltid" />
+            <elementDefinition Id="09eb61d4-ec43-4a2f-bad9-6d35bee929ae" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1b4cd27c-240d-4a79-abfd-f79eda3d31fb" name="Opgaver" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8905ea8f-cd6e-43b7-a7f8-92cabb7440fd" />
+        <targetEnds>
+          <association Id="f74b1f97-27c1-4c2b-9c7d-e757711192ea" isDerived="false" sourceEndRoleName="Opgaver" targetEndRoleName="Måltid" isLeaf="false" isAbstract="false">
+            <classMoniker Id="f9e2e685-b44d-4e42-a623-a4445fa9a349" LastKnownName="Måltid" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ff189db9-0521-4c05-bc6e-58bee81693d2" name="Opgaver" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bfb5469d-f958-4c30-b5d3-232d2c184d66" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="369ed315-6985-42f6-8f31-e658d34a42b2" name="Måltid" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ee681729-d8ac-4ef8-918c-49b3e7bc18cd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="312deb9c-427d-411f-a0db-26c6b56d8ecd" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="78538cae-6fc8-478a-83c6-c5e4d4eff00e" name="Chefkok" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0257cae1-3e2b-478a-8ca3-c76f57b79754" />
+          </property>
+          <property Id="0159d720-27cc-48bf-a691-ebcd2c80710d" name="Opryder" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e81068b2-68d1-489a-baf9-404b7dfbafed" />
+          </property>
+          <property Id="7de9946c-0180-40b7-8eaf-42dc63da9d25" name="Hjælpekok" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b74f46c5-691d-496e-883c-3ddb66d836d1" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="af761593-163f-4717-9f63-21bfbe09685a" name="Klassediagram">
+    <elementDefinition Id="d6e7a9bd-4008-4552-9d90-18f81118ecd4" />
+  </package>
+</logicalClassDesignerModel>

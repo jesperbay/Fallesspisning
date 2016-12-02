@@ -22,6 +22,24 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
+    <Content Include="GeneratedCode\Beborere.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="GeneratedCode\Gæst.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="GeneratedCode\hus.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="GeneratedCode\Måltid.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="GeneratedCode\Opgaver.cs">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="GeneratedCode\Udbetaling.cs">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="virk forhelvede.classdiagram">
       <SubType>Content</SubType>
     </Content>
@@ -29,6 +47,7 @@
       <SubType>Content</SubType>
       <DependentUpon>virk forhelvede.classdiagram</DependentUpon>
     </Content>
+    <Folder Include="GeneratedCode\" />
     <Folder Include="ModelDefinition\" />
     <Content Include="ModelDefinition\kom nu.uml">
       <SubType>Content</SubType>

@@ -11,25 +11,25 @@ using System.Text;
 
 public class Opgaver
 {
-	public virtual object Chefkok
+	public String Chefkok
 	{
 		get;
 		set;
 	}
 
-	public virtual object Opryder
+	public string Opryder
 	{
 		get;
 		set;
 	}
 
-	public virtual object Hjælpekok
+	public string Hjælpekok
 	{
 		get;
 		set;
 	}
 
-	public virtual Måltid Måltid
+	public  Måltid Måltid
 	{
 		get;
 		set;

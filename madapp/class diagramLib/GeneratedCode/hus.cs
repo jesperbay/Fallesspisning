@@ -11,7 +11,7 @@ using System.Text;
 
 public class hus
 {
-	public virtual object Nr
+	public int Nr
 	{
 		get;
 		set;

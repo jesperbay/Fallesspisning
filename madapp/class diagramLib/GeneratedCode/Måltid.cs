@@ -11,13 +11,13 @@ using System.Text;
 
 public class Måltid
 {
-	public virtual object Udgift
+	public int Udgift
 	{
 		get;
 		set;
 	}
 
-	public virtual object Madkalender
+	public DateTime Madkalender
 	{
 		get;
 		set;

@@ -11,19 +11,19 @@ using System.Text;
 
 public class Beborere : hus
 {
-	public virtual object Navn
+	public string Navn
 	{
 		get;
 		set;
 	}
 
-	public virtual object Alder
+	public int Alder
 	{
 		get;
 		set;
 	}
 
-	public virtual Opgaver Opgaver
+	public  Opgaver Opgaver
 	{
 		get;
 		set;

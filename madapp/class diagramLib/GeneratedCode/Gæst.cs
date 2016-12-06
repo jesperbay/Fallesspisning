@@ -11,19 +11,19 @@ using System.Text;
 
 public class Gæst : hus
 {
-	public virtual object Voksen
+	public string Voksen
 	{
 		get;
 		set;
 	}
 
-	public virtual object Barn
+	public string Barn
 	{
 		get;
 		set;
 	}
 
-	public virtual object Ung
+	public string Ung
 	{
 		get;
 		set;

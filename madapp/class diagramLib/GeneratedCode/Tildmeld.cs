@@ -11,13 +11,13 @@ using System.Text;
 
 public class Tildmeld : hus
 {
-	public virtual object ListPerson
+	public string ListPerson
 	{
 		get;
 		set;
 	}
 
-	public virtual Måltid Måltid
+	public Måltid Måltid
 	{
 		get;
 		set;

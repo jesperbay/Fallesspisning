@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Maaltid
+public class Måltid
 {
 	public int Udgift
 	{

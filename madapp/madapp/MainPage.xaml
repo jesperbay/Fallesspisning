@@ -8,6 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="332" Margin="184,186,0,0" VerticalAlignment="Top" Width="268"/>
+        <Button x:Name="Profil" Content="Profil" HorizontalAlignment="Left" Margin="750,186,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Bestil" Content="Bestil" HorizontalAlignment="Left" Margin="750,306,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Opgaver" Content="Opgaver" HorizontalAlignment="Left" Margin="750,447,0,0" VerticalAlignment="Top"/>
+        <Grid HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1280" FocusVisualSecondaryBrush="#99FFFFFF"/>
 
     </Grid>
 </Page>

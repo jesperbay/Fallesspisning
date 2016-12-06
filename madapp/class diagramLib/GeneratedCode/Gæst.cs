@@ -13,20 +13,38 @@ public class Gæst : hus
 {
 	public string Voksen
 	{
-		get;
-		set;
+		get
+        {
+            return Voksen;
+        }
+		set
+        {
+            Voksen = value;
+        }
 	}
 
 	public string Barn
 	{
-		get;
-		set;
+		get
+        {
+            return Barn;
+        }
+		set
+        {
+            Barn = value;
+        }
 	}
 
 	public string Ung
 	{
-		get;
-		set;
+		get
+        {
+            return Ung;
+        }
+		set
+        {
+            Ung = value;
+        }
 	}
 
 }

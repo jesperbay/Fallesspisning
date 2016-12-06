@@ -13,8 +13,10 @@ public class hus
 {
 	public int Nr
 	{
-		get;
-		set;
+		get
+        {
+            return Nr;
+        }
 	}
 
 }

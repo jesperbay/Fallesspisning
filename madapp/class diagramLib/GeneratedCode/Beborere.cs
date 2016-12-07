@@ -13,20 +13,38 @@ public class Beborere : hus
 {
 	public string Navn
 	{
-		get;
-		set;
+        get
+        {
+            return Navn;
+        }
+        set
+        {
+            Navn = value;
+        }
 	}
 
 	public int Alder
 	{
-		get;
-		set;
+		get
+        {
+            return Alder;
+        }
+		set
+        {
+            Alder = value;
+        }
 	}
 
 	public  Opgaver Opgaver
 	{
-		get;
-		set;
+		get
+        {
+            return Opgaver;
+        }
+		set
+        {
+            Opgaver = value;
+        }
 	}
 
 }

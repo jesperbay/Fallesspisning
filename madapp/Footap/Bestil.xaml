@@ -8,7 +8,9 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1280"/>
+        <Grid HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1280">
+            <TextBox x:Name="Husnr" HorizontalAlignment="Left" Margin="62,45,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+        </Grid>
         <CheckBox x:Name="Mandag" Content="" HorizontalAlignment="Left" Margin="223,140,0,0" VerticalAlignment="Top" Width="91" Height="32"/>
         <CheckBox x:Name="Tirsdag" Content="" HorizontalAlignment="Left" Margin="374,142,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.487,0.52" UseLayoutRounding="False" d:LayoutRounding="Auto">
             <CheckBox.RenderTransform>

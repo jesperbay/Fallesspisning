@@ -98,6 +98,13 @@
     <Compile Include="Bestil.xaml.cs">
       <DependentUpon>Bestil.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GeneratedCode\Beborere.cs" />
+    <Compile Include="GeneratedCode\Gæst.cs" />
+    <Compile Include="GeneratedCode\hus.cs" />
+    <Compile Include="GeneratedCode\Måltid.cs" />
+    <Compile Include="GeneratedCode\Opgaver.cs" />
+    <Compile Include="GeneratedCode\Tildmeld.cs" />
+    <Compile Include="GeneratedCode\Udbetaling.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

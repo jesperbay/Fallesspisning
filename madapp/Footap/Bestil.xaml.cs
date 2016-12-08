@@ -26,5 +26,20 @@ namespace Footap
         {
             this.InitializeComponent();
         }
+
+        private void checkBox2_Checked(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void textBox7_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Torsdag2_Checked(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

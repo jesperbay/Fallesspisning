@@ -32,7 +32,7 @@
         <CheckBox x:Name="Onsdag2" Content="" HorizontalAlignment="Left" Margin="527,333,0,0" VerticalAlignment="Top" Checked="checkBox2_Checked"/>
         <CheckBox x:Name="Torsdag2" Content="" HorizontalAlignment="Left" Margin="682,333,0,0" VerticalAlignment="Top" Checked="Torsdag2_Checked"/>
         <CheckBox x:Name="Special2" Content="" HorizontalAlignment="Left" Margin="895,333,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="Bestil" Content="Bestil" HorizontalAlignment="Left" Margin="576,532,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Bestil01" Content="Bestil" HorizontalAlignment="Left" Margin="576,532,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="192,240,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="350,240,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="501,240,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>

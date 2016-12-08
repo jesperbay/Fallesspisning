@@ -9,24 +9,26 @@ using System.Threading.Tasks;
 
 namespace Footap
 {
-    class ViewModel        : INotifyPropertyChanged
+    class MaaltidViewModel        : INotifyPropertyChanged
     {
-        public string Dag { get; set; }
         public string Ret { get; set; }
-        public double Udgift { get; set; }
+        public double MadUdgift { get; set; }
         public Maaltid SelectedItem { get; set; }
 
         public ObservableCollection<Maaltid> maaltider { get; set; }
-
-        public ViewModel()
+        
+        public MaaltidViewModel(string Ret, double MadUdgift)
         {
-                    maaltider = new ObservableCollection<Maaltid>();
+            maaltider = new ObservableCollection<Maaltid>();
+            maaltider.Add(new Maaltid(new DateTime(2016, 12, 8), "Kylling med Korhansovs", 30.5));
         }
 
-        public void AddMandag(string Dag, String Ret, Double Udgift)
+        public void Add()
         {
-            maaltider.Add(new Maaltid());
+            maaltider.Add(new Maaltid(new DateTime() ,Ret, MadUdgift));
+            OnPropertyChanged();
         }
+            
 
         #region PropertyChangeSupport
         public event PropertyChangedEventHandler PropertyChanged;

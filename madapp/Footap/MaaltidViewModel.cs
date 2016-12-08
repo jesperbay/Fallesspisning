@@ -18,7 +18,7 @@ namespace Footap
 
             public ObservableCollection<Maaltid> maaltider { get; set; }
 
-            public MaaltidViewModel (string Ret , double MadUdgift)
+            public MaaltidViewModel ()
             {
                 maaltider = new ObservableCollection<Maaltid>();
                 maaltider.Add(new Maaltid(new DateTime(2016 , 12 , 8) , "Kylling med Korhansovs" , 30.5));

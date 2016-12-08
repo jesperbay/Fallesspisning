@@ -105,6 +105,8 @@
     <Compile Include="GeneratedCode\Opgaver.cs" />
     <Compile Include="GeneratedCode\Tildmeld.cs" />
     <Compile Include="GeneratedCode\Udbetaling.cs" />
+    <Compile Include="Maaltid.cs" />
+    <Compile Include="MaaltidViewModel.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

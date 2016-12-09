@@ -8,9 +8,9 @@ namespace Footap
 {
     class Gaest : Hus
     {
-        public Gaest(int husNr) : base(husNr)
-        {
-        }
+        //public Gaest(int husNr) : base(husNr)
+       // {
+       // }
 
         public int Barn { get; set; }
         public int Ung { get; set; }

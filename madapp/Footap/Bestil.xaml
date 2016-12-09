@@ -35,11 +35,11 @@
         <CheckBox x:Name="Torsdag2" Content="" HorizontalAlignment="Left" Margin="682,333,0,0" VerticalAlignment="Top" Checked="Torsdag2_Checked"/>
         <CheckBox x:Name="Special2" Content="" HorizontalAlignment="Left" Margin="895,333,0,0" VerticalAlignment="Top"/>
         <Button x:Name="Bestil1" Content="Bestil" HorizontalAlignment="Left" Margin="576,532,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="192,240,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="350,240,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="501,240,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="653,240,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" RenderTransformOrigin="-0.009,0.669"/>
-        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Margin="862,240,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Margin="192,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Antal"/>
+        <TextBox x:Name="Antal2" HorizontalAlignment="Left" Margin="350,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Antal"/>
+        <TextBox x:Name="Antal3" HorizontalAlignment="Left" Margin="501,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Anatal"/>
+        <TextBox x:Name="Antal4" HorizontalAlignment="Left" Margin="653,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Antal"/>
+        <TextBox x:Name="Antal5" HorizontalAlignment="Left" Margin="862,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Antal"/>
 
     </Grid>
 </Page>

@@ -6,12 +6,15 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.DataContext>
+        <local:MaaltidViewModel/>
+    </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid HorizontalAlignment="Left" Height="710" VerticalAlignment="Top" Width="1280"/>
         <Grid HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1280">
             <ListView x:Name="listView1" HorizontalAlignment="Left" Height="369" Margin="893,152,0,0" VerticalAlignment="Top" Width="265"/>
-            <ListView x:Name="listView" HorizontalAlignment="Left" Height="337" Margin="93,186,0,0" VerticalAlignment="Top" Width="266"/>
+            <ListView x:Name="listView" HorizontalAlignment="Left" Height="337" Margin="93,186,0,0" VerticalAlignment="Top" Width="266" IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding maaltider}"/>
             <Button x:Name="Profil" Content="Profil" HorizontalAlignment="Left" Margin="654,186,0,0" VerticalAlignment="Top"/>
             <Button x:Name="Bestil" Content="Bestil" HorizontalAlignment="Left" Margin="654,308,0,0" VerticalAlignment="Top"/>
             <Button x:Name="Opgaver" Content="Opgaver" HorizontalAlignment="Left" Margin="654,454,0,0" VerticalAlignment="Top"/>

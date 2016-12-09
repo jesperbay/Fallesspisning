@@ -9,35 +9,45 @@ using System.Threading.Tasks;
 
 namespace Footap
 {
+    class MaaltidViewModel : INotifyPropertyChanged
+    {
+        public DateTime DateGregorian { get; set; }
+        public string Ret { get; set; }
+        public double MadUdgift { get; set; }
+        public Maaltid SelectedItem { get; set; }
 
-        class MaaltidViewModel : INotifyPropertyChanged
+        public ObservableCollection<Maaltid> MaaltiderNu { get; set; }
+        public ObservableCollection<Maaltid> MaaltiderNext { get; set; }
+
+        public MaaltidViewModel()
         {
-            public string Ret { get; set; }
-            public double MadUdgift { get; set; }
-            public Maaltid SelectedItem { get; set; }
-
-            public ObservableCollection<Maaltid> maaltider { get; set; }
-
-            public MaaltidViewModel ()
-            {
-                maaltider = new ObservableCollection<Maaltid>();
-                maaltider.Add(new Maaltid(new DateTime(2016 , 12 , 8) , "Kylling med Korhansovs" , 30.5));
-            }
-
-            public void Add ()
-            {
-                maaltider.Add(new Maaltid(new DateTime() , Ret , MadUdgift));
-                OnPropertyChanged();
-            }
-
-
-            #region PropertyChangeSupport
-            public event PropertyChangedEventHandler PropertyChanged;
-
-            protected virtual void OnPropertyChanged ([CallerMemberName] string propertyName = null)
-            {
-                PropertyChanged?.Invoke(this , new PropertyChangedEventArgs(propertyName));
-            }
-            #endregion
+            MaaltiderNu = new ObservableCollection<Maaltid>();
+            MaaltiderNu.Add(new Maaltid(new DateTime(2016, 12, 8), "Kylling med Korhansovs", 30.5));
+            MaaltiderNext = new ObservableCollection<Maaltid>();
+            MaaltiderNext.Add(new Maaltid(new DateTime(2016, 12, 12), "Fiskefars med konkylieknas", 1337));
         }
+
+        public void AddDenneUge()
+        {
+            MaaltiderNu.Add(new Maaltid(DateGregorian, Ret, MadUdgift));
+            OnPropertyChanged();
+        }
+
+        public void AddNyeUge()
+        {
+            MaaltiderNext.Add(new Maaltid(DateGregorian, Ret, MadUdgift));
+            OnPropertyChanged();
+        }
+
+        #region PropertyChangeSupport
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        #endregion
     }
+}

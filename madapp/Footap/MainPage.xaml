@@ -7,20 +7,40 @@
     xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
     x:Class="Footap.MainPage"
     mc:Ignorable="d">
+    <Page.DataContext>
+        <local:MaaltidViewModel/>
+    </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid HorizontalAlignment="Left" Height="710" VerticalAlignment="Top" Width="1280"/>
         <Grid HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1280">
-            <ListView x:Name="listView1" HorizontalAlignment="Left" Height="335" Margin="911,151,0,0" VerticalAlignment="Top" Width="250"/>
-            <ListView x:Name="listView" HorizontalAlignment="Left" Height="337" Margin="107,122,0,0" VerticalAlignment="Top" Width="266"/>
-            <Button x:Name="Login" Content="Log ind" HorizontalAlignment="Left" Margin="654,186,0,0" VerticalAlignment="Top"/>
-            <Button x:Name="Bestil" Content="Bestil" HorizontalAlignment="Left" Margin="654,308,0,0" VerticalAlignment="Top"/>
-            <Button x:Name="Opgaver" Content="Opgaver" HorizontalAlignment="Left" Margin="654,454,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="Husnr" HorizontalAlignment="Left" Margin="654,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Husnr"/>
-            <Button x:Name="LinkTilBeborer" Content="Link Til Beborer" HorizontalAlignment="Left" Margin="725,36,0,0" VerticalAlignment="Top">
+            <ListView x:Name="listView1" HorizontalAlignment="Left" Height="369" Margin="893,152,0,0" VerticalAlignment="Top" Width="265"/>
+            <ListView x:Name="listView" HorizontalAlignment="Left" Height="337" Margin="93,186,0,0" VerticalAlignment="Top" Width="266" IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding MaaltiderNu}"/>
+            <Button x:Name="Profil" Content="Profil" HorizontalAlignment="Left" Margin="654,186,0,0" VerticalAlignment="Top">
                 <Interactivity:Interaction.Behaviors>
                     <Core:EventTriggerBehavior EventName="Click">
-                        <Core:NavigateToPageAction x:Name="LinkTilBeboere" TargetPage="Footap.Beboreretilfoej"/>
+                        <Core:NavigateToPageAction TargetPage="Footap.Profil"/>
+                    </Core:EventTriggerBehavior>
+                </Interactivity:Interaction.Behaviors>
+            </Button>
+            <Button x:Name="Bestil" Content="Bestil" HorizontalAlignment="Left" Margin="654,308,0,0" VerticalAlignment="Top">
+                <Interactivity:Interaction.Behaviors>
+                    <Core:EventTriggerBehavior EventName="Click">
+                        <Core:NavigateToPageAction TargetPage="Footap.Bestil"/>
+                    </Core:EventTriggerBehavior>
+                </Interactivity:Interaction.Behaviors>
+            </Button>
+            <Button x:Name="Opgaver" Content="Opgaver" HorizontalAlignment="Left" Margin="654,454,0,0" VerticalAlignment="Top">
+                <Interactivity:Interaction.Behaviors>
+                    <Core:EventTriggerBehavior EventName="Click">
+                        <Core:NavigateToPageAction TargetPage="Footap.Opgaver"/>
+                    </Core:EventTriggerBehavior>
+                </Interactivity:Interaction.Behaviors>
+            </Button>
+            <Button x:Name="Planlaegning" Content="Planlægning" HorizontalAlignment="Left" Height="50" Margin="640,560,0,0" VerticalAlignment="Top" Width="245">
+                <Interactivity:Interaction.Behaviors>
+                    <Core:EventTriggerBehavior EventName="Click">
+                        <Core:NavigateToPageAction TargetPage="Footap.AddFood"/>
                     </Core:EventTriggerBehavior>
                 </Interactivity:Interaction.Behaviors>
             </Button>

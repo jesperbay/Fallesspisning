@@ -7,26 +7,45 @@
     xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
     x:Class="Footap.AddFood"
     mc:Ignorable="d">
-    <Page.DataContext>
-        <local:MaaltidViewModel/>
-    </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView x:Name="listView" HorizontalAlignment="Left" Height="560" Margin="10,85,0,0" VerticalAlignment="Top" Width="400" ItemsSource="{Binding MaaltiderNext}"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="45" Margin="440,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" PlaceholderText="Dato xxxx,xx,xx" DataContext="{Binding DateGregorian}"/>
-        <Button x:Name="Tilfoej" Content="Tilføj" HorizontalAlignment="Left" Height="65" Margin="440,235,0,0" VerticalAlignment="Top" Width="115">
+        <Grid.DataContext>
+            <local:MaaltidViewModel/>
+        </Grid.DataContext>
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="555" Margin="10,85,0,0" VerticalAlignment="Top" Width="530" ItemsSource="{Binding MaaltiderNext, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="45" Margin="565,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" PlaceholderText="Dato xxxx,xx,xx" Text="{Binding Dag, Mode=TwoWay}"/>
+        <Button x:Name="Tilfoej" Content="Tilføj" HorizontalAlignment="Left" Height="65" Margin="565,245,0,0" VerticalAlignment="Top" Width="115">
             <Interactivity:Interaction.Behaviors>
                 <Core:EventTriggerBehavior EventName="Click">
                     <Core:CallMethodAction MethodName="AddNyeUge" TargetObject="{Binding Mode=OneWay}"/>
                 </Core:EventTriggerBehavior>
             </Interactivity:Interaction.Behaviors>
         </Button>
-        <Button x:Name="Slet" Content="Slet" HorizontalAlignment="Left" Height="65" Margin="440,350,0,0" VerticalAlignment="Top" Width="115"/>
-        <Button x:Name="Overfoer" Content="Overfør" HorizontalAlignment="Left" Height="65" Margin="440,475,0,0" VerticalAlignment="Top" Width="115"/>
-        <Button x:Name="Gem" Content="Gem" HorizontalAlignment="Left" Height="65" Margin="1090,475,0,0" VerticalAlignment="Top" Width="115"/>
-        <ListView x:Name="listView_Copy" HorizontalAlignment="Left" Height="360" Margin="800,85,0,0" VerticalAlignment="Top" Width="240" ItemsSource="{Binding MaaltiderNu}"/>
-        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="45" Margin="440,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" PlaceholderText="Ret" DataContext="{Binding Ret}"/>
-        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Height="45" Margin="440,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" PlaceholderText="Udgifter" DataContext="{Binding MadUdgift}"/>
+        <Button x:Name="Slet" HorizontalAlignment="Left" Height="65" Margin="565,360,0,0" VerticalAlignment="Top" Width="115" Content="Slet">
+            <Interactivity:Interaction.Behaviors>
+                <Core:EventTriggerBehavior EventName="Click">
+                    <Core:CallMethodAction MethodName="Remove" TargetObject="{Binding Mode=OneWay}"/>
+                </Core:EventTriggerBehavior>
+            </Interactivity:Interaction.Behaviors>
+        </Button>
+        <Button x:Name="Overfoer" Content="Overfør" HorizontalAlignment="Left" Height="65" Margin="565,485,0,0" VerticalAlignment="Top" Width="115">
+            <Interactivity:Interaction.Behaviors>
+                <Core:EventTriggerBehavior EventName="Click">
+                    <Core:CallMethodAction MethodName="Move" TargetObject="{Binding Mode=OneWay}"/>
+                </Core:EventTriggerBehavior>
+            </Interactivity:Interaction.Behaviors>
+        </Button>
+        <Button x:Name="Gem" Content="Gem" HorizontalAlignment="Left" Height="40" Margin="1155,670,0,0" VerticalAlignment="Top" Width="115"/>
+        <ListView x:Name="listView_Copy" HorizontalAlignment="Left" Height="555" Margin="740,85,0,0" VerticalAlignment="Top" Width="520" ItemsSource="{Binding MaaltiderNu}" SelectedItem="{Binding SelectedItem2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="45" Margin="565,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" PlaceholderText="Ret" Text="{Binding Ret, Mode=TwoWay}"/>
+        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Height="45" Margin="565,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" PlaceholderText="Udgifter" Text="{Binding MadUdgift, Mode=TwoWay}"/>
+        <Button x:Name="Tilbage" Content="Forside" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1000,20,0,0" Width="200" Height="40">
+            <Interactivity:Interaction.Behaviors>
+                <Core:EventTriggerBehavior EventName="Click">
+                    <Core:NavigateToPageAction TargetPage="Footap.MainPage"/>
+                </Core:EventTriggerBehavior>
+            </Interactivity:Interaction.Behaviors>
+        </Button>
 
     </Grid>
 </Page>

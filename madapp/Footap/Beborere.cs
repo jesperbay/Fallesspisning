@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,14 +9,29 @@ namespace Footap
 {
     class Beborere : Hus
     {
-        public int Alder { get; set; }
-        public string Navn { get; set; }
+        public ObservableCollection<Beborere> Beboreres { get; set; }
+        public ObservableCollection<Hus> Huses { get; set; }
 
-        public Beborere(int alder, string navn, int husNr)
+        public string Navn { get; set; }
+        public int Alder { get; set; }
+        public int HusNr { get; set; }
+
+    
+       
+
+
+        public Beborere(string navn, int alder, int HusNr)
         {
-            Alder = alder;
             Navn = navn;
-            husNr = husNr;
+            Alder = alder;
+            HusNr = husNr;
+        }
+
+        
+
+        public override string ToString()
+        {
+            return string.Format("Navn {0}, Alder {1}, HusNr {2}", Navn, Alder, husNr);
         }
     }
 }

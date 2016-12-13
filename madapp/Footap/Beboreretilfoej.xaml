@@ -13,14 +13,11 @@
                 <local:BeborereVm/>
             </Grid.DataContext>
             <Button x:Name="tilmeldNu" Content="Tilmeld" HorizontalAlignment="Left" Margin="616,426,0,0" VerticalAlignment="Top"/>
-            <ComboBox x:Name="Husnr2" HorizontalAlignment="Left" Margin="961,209,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding husNr}">
-                <ComboBox.DataContext>
-                    <local:Hus/>
-                </ComboBox.DataContext>
-            </ComboBox>
+            <ComboBox x:Name="Husnr2" HorizontalAlignment="Left" Margin="955,209,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding HusNr01}" IsSynchronizedWithCurrentItem="False"/>
             <TextBox x:Name="Alder3" HorizontalAlignment="Left" Margin="610,209,0,0" TextWrapping="Wrap" Text="{Binding Alder, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Alder"/>
             <TextBox x:Name="Navn3" HorizontalAlignment="Left" Margin="285,209,0,0" TextWrapping="Wrap" Text="{Binding Name, Mode=TwoWay}" VerticalAlignment="Top" PlaceholderText="Navn"/>
             <ListView x:Name="UdskrivNavn" HorizontalAlignment="Left" Height="294" Margin="221,325,0,0" VerticalAlignment="Top" Width="309" ItemsSource="{Binding Beboreres}"/>
+            <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="176" Margin="891,325,0,0" VerticalAlignment="Top" Width="220" ItemsSource="{Binding HusNr01}"/>
         </Grid>
 
     </Grid>

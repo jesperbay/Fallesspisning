@@ -8,7 +8,9 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1280"/>
+        <Grid HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1280">
+            <TextBox x:Name="Husnr" HorizontalAlignment="Left" Margin="62,45,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+        </Grid>
         <CheckBox x:Name="Mandag" Content="" HorizontalAlignment="Left" Margin="223,140,0,0" VerticalAlignment="Top" Width="91" Height="32"/>
         <CheckBox x:Name="Tirsdag" Content="" HorizontalAlignment="Left" Margin="374,142,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.487,0.52" UseLayoutRounding="False" d:LayoutRounding="Auto">
             <CheckBox.RenderTransform>
@@ -32,12 +34,12 @@
         <CheckBox x:Name="Onsdag2" Content="" HorizontalAlignment="Left" Margin="527,333,0,0" VerticalAlignment="Top" Checked="checkBox2_Checked"/>
         <CheckBox x:Name="Torsdag2" Content="" HorizontalAlignment="Left" Margin="682,333,0,0" VerticalAlignment="Top" Checked="Torsdag2_Checked"/>
         <CheckBox x:Name="Special2" Content="" HorizontalAlignment="Left" Margin="895,333,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="Bestil01" Content="Bestil" HorizontalAlignment="Left" Margin="576,532,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="192,240,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="350,240,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="501,240,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="653,240,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" RenderTransformOrigin="-0.009,0.669"/>
-        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Margin="862,240,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top"/>
+        <Button x:Name="Bestil1" Content="Bestil" HorizontalAlignment="Left" Margin="576,532,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Margin="192,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Antal"/>
+        <TextBox x:Name="Antal2" HorizontalAlignment="Left" Margin="350,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Antal"/>
+        <TextBox x:Name="Antal3" HorizontalAlignment="Left" Margin="501,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Anatal"/>
+        <TextBox x:Name="Antal4" HorizontalAlignment="Left" Margin="653,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Antal"/>
+        <TextBox x:Name="Antal5" HorizontalAlignment="Left" Margin="862,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Antal"/>
 
     </Grid>
 </Page>

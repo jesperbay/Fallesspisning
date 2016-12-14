@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -17,6 +18,8 @@ namespace Footap
         public Maaltid SelectedItem { get; set; }
         public Maaltid SelectedItem2 { get; set; }
 
+       
+        
         public ObservableCollection<Maaltid> MaaltiderNu { get; set; }
         public ObservableCollection<Maaltid> MaaltiderNext { get; set; }
 
@@ -39,6 +42,7 @@ namespace Footap
             MaaltiderNext.Add(new Maaltid(Dag, Ret, MadUdgift));
             OnPropertyChanged();
         }
+
         public void Remove()
         {
             if (SelectedItem != null)
@@ -51,8 +55,11 @@ namespace Footap
                 MaaltiderNu.Remove(SelectedItem2);
                 OnPropertyChanged();
             }
+        
 
-        }
+
+      
+    }
         public void Move ()
         {
             if (SelectedItem != null)

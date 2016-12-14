@@ -119,6 +119,7 @@
     </Compile>
     <Compile Include="Opgaverne.cs" />
     <Compile Include="OpgaverVm.cs" />
+    <Compile Include="PersistencyNotes.cs" />
     <Compile Include="Profil.xaml.cs">
       <DependentUpon>Profil.xaml</DependentUpon>
     </Compile>

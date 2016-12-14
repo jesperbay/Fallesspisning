@@ -20,26 +20,11 @@ namespace Footap
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Bestil : Page
+    public sealed partial class Beboreretilfoej : Page
     {
-        public Bestil()
+        public Beboreretilfoej()
         {
             this.InitializeComponent();
-        }
-
-        private void checkBox2_Checked(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void Torsdag2_Checked(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void textBox7_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            throw new NotImplementedException();
         }
     }
 }

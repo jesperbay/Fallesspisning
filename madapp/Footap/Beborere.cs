@@ -9,6 +9,7 @@ namespace Footap
 {
     class Beborere : Hus
     {
+
         public ObservableCollection<Beborere> Beboreres { get; set; }
         public ObservableCollection<Hus> Huses { get; set; }
 
@@ -16,22 +17,19 @@ namespace Footap
         public int Alder { get; set; }
         public int HusNr { get; set; }
 
-    
-       
-
-
-        public Beborere(string navn, int alder, int HusNr)
+        public Beborere( string navn, int alder, int husNr)
         {
             Navn = navn;
             Alder = alder;
             HusNr = husNr;
         }
-
         
+
+
 
         public override string ToString()
         {
-            return string.Format("Navn {0}, Alder {1}, HusNr {2}", Navn, Alder, husNr);
+            return string.Format("Navn {0}, Alder {1}, HusNr {2}", Navn, Alder, HusNr);
         }
     }
 }

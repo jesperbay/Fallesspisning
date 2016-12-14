@@ -40,10 +40,10 @@ namespace Footap
         //    }
         //}
 
-        public override string ToString()
-        {
-            return string.Format("HusNr {0}", HusNr);  
-        }
+        //public override string ToString()
+        //{
+        //    return string.Format("HusNr {0}", HusNr);  
+        //}
        
     }
 }

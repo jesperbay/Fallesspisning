@@ -92,6 +92,9 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddFood.xaml.cs">
+      <DependentUpon>AddFood.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -106,6 +109,8 @@
     <Compile Include="Gaest.cs" />
     <Compile Include="Hus.cs" />
     <Compile Include="HusVm.cs" />
+    <Compile Include="Maaltid.cs" />
+    <Compile Include="MaaltidViewModel.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -144,6 +149,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AddFood.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Beboreretilfoej.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -11,10 +11,10 @@ using Newtonsoft.Json;
 
 namespace Footap
 {
-    class PersistencyNotes
+    class PersistencyMaaltid
 
     {
-        private static string JsonFileName = "NotesAsJson.dat";
+        private static string JsonFileName = "MaaltidGemmer.dat";
 
         public static async void SaveNotesAsJsonAsync (ObservableCollection<Maaltid> MaaltiderNu)
         {

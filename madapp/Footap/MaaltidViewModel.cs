@@ -20,14 +20,18 @@ namespace Footap
         public double MadUdgift { get; set; }
         public Maaltid SelectedItem { get; set; }
         public Maaltid SelectedItem2 { get; set; }
+        public RelayMaaltid HentMaaltid { get; set; }
+        public RelayMaaltid GemMaaltid { get; set; }
 
-       
-        
+
+
         public ObservableCollection<Maaltid> MaaltiderNu { get; set; }
         public ObservableCollection<Maaltid> MaaltiderNext { get; set; }
 
         public MaaltidViewModel()
         {
+            HentMaaltid = new RelayMaaltid(LoadFood);
+            GemMaaltid = new RelayMaaltid(SaveFood);
             MaaltiderNu = new ObservableCollection<Maaltid>();
             MaaltiderNu.Add(new Maaltid("Mandag", "Kylling med Korhansovs", 30.5));
             MaaltiderNext = new ObservableCollection<Maaltid>();
@@ -71,85 +75,26 @@ namespace Footap
                 MaaltiderNext.Remove(SelectedItem);
             }
         }
-
-
-        public class PersistencyPls
+        private async void LoadFood ()
         {
-            
-      
-                            
-
-            private static
-            string JsonFileName = "NotesAsJson.dat";
-
-                public static
-            async
-            void SaveNotesAsJsonAsync 
-            (ObservableCollection < Maaltid > MaaltiderNu)
+            var notes = await PersistencyMaaltid.LoadNotesFromJsonAsync();
+            if (notes != null)
             {
-                string notesJsonString = JsonConvert.SerializeObject(MaaltiderNu);
-                SerializeNotesFileAsync(notesJsonString, JsonFileName);
-            }
-
-            public static
-            async
-            Task<List<Maaltid>> LoadNotesFromJsonAsync 
-            ()
-            {
-                string notesJsonString = await DeserializeNotesFileAsync(JsonFileName);
-                if (notesJsonString != null)
-                    return (List<Maaltid>) JsonConvert.DeserializeObject(notesJsonString, typeof(List<Maaltid>));
-                return null;
-            }
-
-
-
-            private static
-            async
-            void SerializeNotesFileAsync 
-            (string notesJsonString, string fileName)
-            {
-                StorageFile localFile =
-                    await
-                        ApplicationData.Current.LocalFolder.CreateFileAsync(fileName,
-                            CreationCollisionOption.ReplaceExisting);
-                await FileIO.WriteTextAsync(localFile, notesJsonString);
-            }
-
-
-            private static
-            async
-            Task<string> DeserializeNotesFileAsync 
-            (string
-            fileName)
-            {
-                try
+                MaaltiderNu.Clear();
+                foreach (var note in notes)
                 {
-                    StorageFile localFile = await ApplicationData.Current.LocalFolder.GetFileAsync(fileName);
-                    return await FileIO.ReadTextAsync(localFile);
+                    MaaltiderNu.Add(note);
                 }
-                catch (FileNotFoundException ex)
-                {
-                    MessageDialogHelper.Show(
-                        "Loading for the first time? - Try Add and Save some Notes before trying to Save for the first time",
-                        "File not Found");
-                    return null;
-                }
+
             }
 
-            private class
-            MessageDialogHelper
-            {
-                public static
-                async
-                void Show 
-                (string content, string title)
-                {
-                    MessageDialog messageDialog = new MessageDialog(content, title);
-                    await messageDialog.ShowAsync();
-                }
-            }
         }
+
+        private async void SaveFood ()
+        {
+            PersistencyMaaltid.SaveNotesAsJsonAsync(MaaltiderNu);
+        }
+      
 
         #region PropertyChangeSupport
 

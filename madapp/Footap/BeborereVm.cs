@@ -6,11 +6,13 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Footap.Annotations;
+
 
 namespace Footap
 {
-    class BeborereVm : INotifyPropertyChanged
+    class BeborereVm : INotifyPropertyChanged 
     {
         public ObservableCollection<Beborere> Beboreres { get; set; }
         public string Name { get; set; }
@@ -20,11 +22,21 @@ namespace Footap
         public int ListHusNr { get; set; }
         public int SelectedIndex { get; set; }
 
+        public RelayCommand AddBeborerCommand { get; set; }
+        public RelayCommand RemoveBeborerCommand { get; set; }
+        public RelayCommand GetBeborerCommand { get; set; }
+        public RelayCommand SaveBeborerCommand { get; set; }
+
+
        
-        
 
         public BeborereVm()
-        {
+       {
+          AddBeborerCommand = new RelayCommand(Add);
+          RemoveBeborerCommand = new RelayCommand(Remove);
+           GetBeborerCommand = new RelayCommand(LoadBeboreres);
+            SaveBeborerCommand = new RelayCommand(SaveBeboreres);
+
             Huses = new ObservableCollection<Hus>();
             Beboreres = new ObservableCollection<Beborere>();
             Beboreres.Add(new Beborere("Jens", 22, 74));
@@ -58,11 +70,30 @@ namespace Footap
         ////    }
         //}
 
-        public void Add()
+       
+
+        private async void LoadBeboreres()
+        {
+            var Beboreress = await PersistencyService.LoadBeborereFromJsonAsync();
+            if (Beboreress != null)
+            {
+                //Beboreres.Clear();
+                foreach (var Beborer in Beboreress)
+                {
+                    Beboreres.Add(Beborer);
+                }
+
+            }
+
+        }
+
+ public void Add()
         {
             Beboreres.Add(new Beborere(Name, Alder, HusNr));
-           
+
         }
+
+
 
         public void Remove()
         {
@@ -79,6 +110,14 @@ namespace Footap
            
             
         }
+
+        private async void SaveBeboreres()
+        {
+            
+            PersistencyService.SaveNotesAsJsonAsync(Beboreres);
+        }
+
+
         //public override string ToString()
         //{
         //    for (int i = 0; i < HusNrArray.Length; i++)
@@ -98,4 +137,6 @@ namespace Footap
         } 
         #endregion
     }
+
+   
 }

@@ -8,7 +8,7 @@ namespace Footap
 {
     class Hus
     {
-        public int husNr { get; set; }
+        public int HusNr { get; set; }
 
       
             
@@ -21,7 +21,7 @@ namespace Footap
 
         public override string ToString()
         {
-            return string.Format("HusNr {0}", husNr);
+            return string.Format("HusNr {0}", HusNr);
         }
 
 

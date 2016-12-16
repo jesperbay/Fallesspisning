@@ -13,16 +13,21 @@ namespace Footap
         public ObservableCollection<Beborere> Beboreres { get; set; }
         public ObservableCollection<Hus> Huses { get; set; }
 
+
         public string Navn { get; set; }
         public int Alder { get; set; }
         public int HusNr { get; set; }
 
-        public Beborere( string navn, int alder, int husNr)
+        public Beborere(string navn, int alder, int husNr)
         {
+           
             Navn = navn;
             Alder = alder;
             HusNr = husNr;
+
         }
+
+     
         
 
 

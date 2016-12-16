@@ -106,7 +106,7 @@ namespace Footap
                 OnPropertyChanged();
             }
                
-
+                  
            
             
         }

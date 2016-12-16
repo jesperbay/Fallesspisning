@@ -27,14 +27,10 @@ namespace Footap
 
         }
 
-     
-        
-
-
 
         public override string ToString()
         {
-            return string.Format("Navn {0}, Alder {1}, HusNr {2}", Navn, Alder, HusNr);
+            return $"{base.ToString()}, {nameof(Navn)}: {Navn}, {nameof(Alder)}: {Alder}, {nameof(HusNr)}: {HusNr}";
         }
     }
 }

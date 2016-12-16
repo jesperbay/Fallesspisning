@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.ViewManagement;
+using Footap.Annotations;
 
 namespace Footap
 {
@@ -35,14 +37,24 @@ namespace Footap
         //    SaveBeborerCommand = new RelayCommand(SaveBeboreres);
         //}
 
+
+
+        //public void Add (string name , string job)
+        //{
+        //    Opgavernes.Add(new Opgaverne(name , job));
+        //}
+
+        //public event PropertyChangedEventHandler PropertyChanged;
+
+
+        #region PCS
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public void Add(string name, string job)
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged ([CallerMemberName] string propertyName = null)
         {
-            Opgavernes.Add(new Opgaverne(name, job));
-        }
-
-       
-
+            PropertyChanged?.Invoke(this , new PropertyChangedEventArgs(propertyName));
+        } 
+        #endregion
     }
 }

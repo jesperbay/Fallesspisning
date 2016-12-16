@@ -16,12 +16,12 @@ namespace Footap
         public int Ung { get; set; }
         public int Voksen { get; set; }
 
-        public Gaest(int Barn, int Ung, int Voksen, int husNr)
+        public Gaest(int barn, int ung, int voksen, int husNr)
         {
-            Barn = Barn;
-            Ung = Ung;
-            Voksen = Voksen;
-            husNr = husNr;
+            Barn = barn;
+            Ung = ung;
+            Voksen = voksen;
+            HusNr = husNr;
         }
         
     }

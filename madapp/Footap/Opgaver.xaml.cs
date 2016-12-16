@@ -22,9 +22,21 @@ namespace Footap
     /// </summary>
     public sealed partial class Opgaver : Page
     {
+        private int alder;
+        private int husNr;
+        private string job;
+
         public Opgaver()
         {
             this.InitializeComponent();
+        }
+
+        public Opgaver(string name, string job, int alder, int husNr)
+        {
+            Name = name;
+            this.job = job;
+            this.alder = alder;
+            this.husNr = husNr;
         }
     }
 }

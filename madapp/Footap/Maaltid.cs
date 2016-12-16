@@ -23,5 +23,9 @@ namespace Footap
         {
             return $"{nameof(Dag)}: {Dag}, {nameof(Ret)}: {Ret}, {nameof(MadUdgift)}: {MadUdgift}";
         }
+
+
 }
+
+
 }

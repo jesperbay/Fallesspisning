@@ -11,7 +11,7 @@ using Footap.Annotations;
 
 namespace Footap
 {
-    class OpgaverVm : INotifyPropertyChanged
+        class OpgaverVm : INotifyPropertyChanged
     {
         public string Name { get; set; }
         public string Job { get; set; }
@@ -19,6 +19,7 @@ namespace Footap
         public int HusNr { get; set; }
         public ObservableCollection<Opgaver> Opgavers { get; set; }
         public int SelectedIndex { get; set; }
+        
 
         public RelayOpgaver AddRelayOpgaver { get; set; }
         public RelayOpgaver RemoRelayOpgaver { get; set; }
@@ -38,6 +39,7 @@ namespace Footap
             Alder = alder;
             HusNr = husNr;
             SelectedIndex = selectedIndex;
+            
             AddRelayOpgaver = new RelayOpgaver(Add);
             RemoRelayOpgaver = new RelayOpgaver(Remove);
             GetRelayOpgaver = new RelayOpgaver(LoadOpgavers);
@@ -100,11 +102,12 @@ namespace Footap
         public void Add()
         {
             Opgavers.Add(new Opgaver(Name, Job, Alder, HusNr));
-
+            MySpiseDageList.Add(new OpgaverDage());
+            
             //Opgavers.Add(new Opgaver(Name, Job, Alder, HusNr));
 
         }
-
+        
 
 
         public void Remove()
@@ -123,23 +126,49 @@ namespace Footap
         private async void SaveOpgavers()
         {
             PersistencyServiceOpgaver.SaveNotesAsJsonAsync(Opgavers);
+
+        }
+
+        public List<OpgaverDage> MySpiseDageList = new List<OpgaverDage>();
+        OpgaverDage Mandag = new OpgaverDage();
+        OpgaverDage Tirsdag = new OpgaverDage();
+        OpgaverDage Onsdag= new OpgaverDage();
+        OpgaverDage Torsdag = new OpgaverDage();
+        OpgaverDage Specialdag = new OpgaverDage();
+        OpgaverDage Name1 = new OpgaverDage();
+        OpgaverDage Opvasker = new OpgaverDage();
+        OpgaverDage HjaelpeKok = new OpgaverDage();
+        public void DageOpgaver()
+        {
+            MySpiseDageList = new List<OpgaverDage>();
+        }
+
+        public class OpgaverDage
+       {
+            
+        public string Mandag { get; set; }
+        public string Tirsdag { get; set; }
+        public string Onsdag { get; set; }
+        public string Torsdag { get; set; }
+        public string Specialdag { get; set; }
+        public string Name { get; set; }
+        public string Opvasker { get; set; }
+        public string HjaelpeKok { get; set; }
+           
         }
 
 
-        //List<string> Mandag = new List<string>();
-
-       
 
 
 
-    ////public void Add(string name, string job)
-    ////{
-    ////    Opgavernes.Add(new Opgaverne(name, job));
-    ////}
+        //public void Add(string name, string job)
+        //{
+        //    Opgavernes.Add(new Opgaverne(name, job));
+        //}
 
 
-    #region MyRegion
-    public event PropertyChangedEventHandler PropertyChanged;
+        #region MyRegion
+        public event PropertyChangedEventHandler PropertyChanged;
 
     [NotifyPropertyChangedInvocator]
     protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
@@ -148,4 +177,6 @@ namespace Footap
     } 
     #endregion
 }
+
+  
 }

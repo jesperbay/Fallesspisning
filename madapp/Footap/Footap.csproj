@@ -109,6 +109,7 @@
     <Compile Include="Gaest.cs" />
     <Compile Include="Hus.cs" />
     <Compile Include="HusVm.cs" />
+    <Compile Include="ListForOpgaverVm.cs" />
     <Compile Include="Maaltid.cs" />
     <Compile Include="MaaltidViewModel.cs" />
     <Compile Include="MainPage.xaml.cs">

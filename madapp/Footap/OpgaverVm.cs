@@ -129,15 +129,15 @@ namespace Footap
 
         }
 
-        public List<OpgaverDage> MySpiseDageList = new List<OpgaverDage>();
-        OpgaverDage Mandag = new OpgaverDage();
-        OpgaverDage Tirsdag = new OpgaverDage();
-        OpgaverDage Onsdag= new OpgaverDage();
-        OpgaverDage Torsdag = new OpgaverDage();
-        OpgaverDage Specialdag = new OpgaverDage();
-        OpgaverDage Name1 = new OpgaverDage();
-        OpgaverDage Opvasker = new OpgaverDage();
-        OpgaverDage HjaelpeKok = new OpgaverDage();
+      public List<OpgaverDage> MySpiseDageList = new List<OpgaverDage>();
+      public OpgaverDage Mandag = new OpgaverDage();
+      public  OpgaverDage Tirsdag = new OpgaverDage();
+      public OpgaverDage Onsdag= new OpgaverDage();
+      public  OpgaverDage Torsdag = new OpgaverDage();
+      public OpgaverDage Specialdag = new OpgaverDage();
+      public OpgaverDage Name1 = new OpgaverDage();
+      public OpgaverDage Opvasker = new OpgaverDage();
+      public  OpgaverDage HjaelpeKok = new OpgaverDage();
         public void DageOpgaver()
         {
             MySpiseDageList = new List<OpgaverDage>();

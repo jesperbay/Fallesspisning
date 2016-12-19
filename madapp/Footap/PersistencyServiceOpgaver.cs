@@ -13,32 +13,32 @@ namespace Footap
 {
     class PersistencyServiceOpgaver
     {
-        private static string JsonFileName = "OpgaverJason.dat";
+        private static string JsonFileName = "OpgaverJson.dat";
 
-        public static async void SaveNotesAsJsonAsync(ObservableCollection<Opgaver> Opgavers)
+        public static async void SaveOpgaverAsJsonAsync(OpgaverJSONs opgaverJson)
         {
-            string notesJsonString = JsonConvert.SerializeObject(Opgavers);
-            SerializeNotesFileAsync(notesJsonString, JsonFileName);
+            string mandagOpgJsonString = JsonConvert.SerializeObject(opgaverJson);
+            SerializeMandagOpgFileAsync(mandagOpgJsonString, JsonFileName);
         }
 
-        public static async Task<List<Opgaver>> LoadOpgaverFromJsonAsync()
+        public static async Task<OpgaverJSONs> LoadOpgaverFromJsonAsync()
         {
-            string notesJsonString = await DeserializeNotesFileAsync(JsonFileName);
-            if (notesJsonString != null)
-                return (List<Opgaver>)JsonConvert.DeserializeObject(notesJsonString, typeof(List<Opgaver>));
+            string mandagOpgJsonString = await DeserializeMandagOpgFileAsync(JsonFileName);
+            if (mandagOpgJsonString != null)
+                return (OpgaverJSONs)JsonConvert.DeserializeObject(mandagOpgJsonString, typeof(OpgaverJSONs));
             return null;
         }
 
 
 
-        private static async void SerializeNotesFileAsync(string notesJsonString, string fileName)
+        private static async void SerializeMandagOpgFileAsync(string mandagOpgJsonString, string fileName)
         {
             StorageFile localFile = await ApplicationData.Current.LocalFolder.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);
-            await FileIO.WriteTextAsync(localFile, notesJsonString);
+            await FileIO.WriteTextAsync(localFile, mandagOpgJsonString);
         }
 
 
-        private static async Task<string> DeserializeNotesFileAsync(string fileName)
+        private static async Task<string> DeserializeMandagOpgFileAsync(string fileName)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace Footap
             }
             catch (FileNotFoundException ex)
             {
-                MessageDialogHelper.Show("Loading for the first time? - Try Add and Save some Notes before trying to Save for the first time", "File not Found");
+                PersistencyServiceOpgaver.MessageDialogHelper.Show("Loading for the first time? - Try Add and Save some Notes before trying to Save for the first time", "File not Found");
                 return null;
             }
         }
@@ -62,6 +62,10 @@ namespace Footap
             }
         }
 
+        internal static void SaveNotesAsJsonAsync(OpgaverJSONs ugeJobs)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

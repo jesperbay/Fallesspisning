@@ -38,5 +38,8 @@ namespace Footap
             this.alder = alder;
             this.husNr = husNr;
         }
+
+       
+        }
     }
-}
+

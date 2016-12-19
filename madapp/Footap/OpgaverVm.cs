@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
@@ -17,8 +18,17 @@ namespace Footap
         public string Job { get; set; }
         public int Alder { get; set; }
         public int HusNr { get; set; }
+        public int MandagJob { get; set; }
+        public int TirsdagJob { get; set; }
+        public int OnsdagJob { get; set; }
+        public int TorsdagJob { get; set; }
         public ObservableCollection<Opgaver> Opgavers { get; set; }
         public int SelectedIndex { get; set; }
+
+        public List<Opgaverne> OpgaverneMandag { get; set; }
+        public List<Opgaverne> OpgaverneTirsdag { get; set; }
+        public List<Opgaverne> OpgaverneOnsdag { get; set; }
+        public List<Opgaverne> OpgaverneTorsdag { get; set; }
         
 
         public RelayOpgaver AddRelayOpgaver { get; set; }
@@ -28,9 +38,16 @@ namespace Footap
 
         public OpgaverVm()
         {
-            
+            GetRelayOpgaver = new RelayOpgaver(LoadOpgavers);
+            SaveRelayOpgaver = new RelayOpgaver(SaveOpgavers);
+            OpgaverneMandag = new List<Opgaverne>();
+            OpgaverneTirsdag = new List<Opgaverne>();
+            OpgaverneOnsdag = new List<Opgaverne>();
+            OpgaverneTorsdag = new List<Opgaverne>();
         }
 
+      
+        
 
         public OpgaverVm(string name, string job, int alder, int husNr, int selectedIndex)
         {
@@ -46,6 +63,23 @@ namespace Footap
             SaveRelayOpgaver = new RelayOpgaver(SaveOpgavers);
             Opgavers = new ObservableCollection<Opgaver>();
         }
+
+       
+
+        public void TilmeldOpgaverKnap()
+        {
+            LoadOpgavers();
+            Add();
+            SaveOpgavers();
+        }
+        private async void SaveOpgavers()
+        {
+            OpgaverJSONs ugeJobs = new OpgaverJSONs(OpgaverneMandag, OpgaverneTirsdag, OpgaverneOnsdag, OpgaverneTorsdag);
+            PersistencyServiceOpgaver.SaveNotesAsJsonAsync(ugeJobs);
+        }
+
+
+
         //    public string Name { get; set; }
         //    public string Job { get; set; }
         //    public ObservableCollection<Opgaver> Opgavers { get; set; }
@@ -85,26 +119,50 @@ namespace Footap
 
         private async void LoadOpgavers()
         {
-            var Opgaverss = await PersistencyServiceOpgaver.LoadOpgaverFromJsonAsync();
-            if (Opgaverss != null)
+
+            await Task.Delay(1000);
+            var OpgaverJson = await PersistencyServiceOpgaver.LoadOpgaverFromJsonAsync();
+            if (OpgaverJson != null)
+
+                OpgaverneMandag.Clear();
+
+            foreach (var opg in OpgaverJSONs.MandagsJob)
             {
-                //Beboreres.Clear();
-                foreach (var Opgaver in Opgaverss)
-                {
-                    Opgavers.Add(Opgaver);
-
-                }
-
+                OpgaverneMandag.Add(opg);
             }
+
+            OpgaverneTirsdag.Clear();
+
+            foreach (var opg in OpgaverJSONs.TirsdagsJob)
+            {
+               OpgaverneTirsdag.Add(opg); 
+            }
+
+            OpgaverneOnsdag.Clear();
+
+            foreach (var opg in OpgaverJSONs.OnsdagsJob)
+            {
+                OpgaverneOnsdag.Add(opg);
+            }
+
+            OpgaverneTorsdag.Clear();
+
+            foreach (var opg in OpgaverJSONs.TorsdagsJob)
+            {
+                OpgaverneTorsdag.Add(opg);
+            }
+            await Task.Delay(1000);
 
         }
 
         public void Add()
         {
-            Opgavers.Add(new Opgaver(Name, Job, Alder, HusNr));
-            MySpiseDageList.Add(new OpgaverDage());
-            
-            //Opgavers.Add(new Opgaver(Name, Job, Alder, HusNr));
+           
+           
+            OpgaverneMandag.Add(new Opgaverne(Name, Job, Alder, HusNr));
+            OpgaverneTirsdag.Add(new Opgaverne(Name, Job, Alder, HusNr));
+            OpgaverneOnsdag.Add(new Opgaverne(Name, Job, Alder, HusNr));
+            OpgaverneTorsdag.Add(new Opgaverne(Name, Job, Alder, HusNr));
 
         }
         
@@ -123,41 +181,37 @@ namespace Footap
 }
 
 
-        private async void SaveOpgavers()
-        {
-            PersistencyServiceOpgaver.SaveNotesAsJsonAsync(Opgavers);
+      
 
-        }
+      //public List<OpgaverDage> MySpiseDageList = new List<OpgaverDage>();
+      //public OpgaverDage Mandag = new OpgaverDage();
+      //public  OpgaverDage Tirsdag = new OpgaverDage();
+      //public OpgaverDage Onsdag= new OpgaverDage();
+      //public  OpgaverDage Torsdag = new OpgaverDage();
+      //public OpgaverDage Specialdag = new OpgaverDage();
+      //public OpgaverDage Name1 = new OpgaverDage();
+      //public OpgaverDage Opvasker = new OpgaverDage();
+      //public  OpgaverDage HjaelpeKok = new OpgaverDage();
+      //  public void DageOpgaver()
+      //  {
+      //      MySpiseDageList = new List<OpgaverDage>();
+      //  }
 
-      public List<OpgaverDage> MySpiseDageList = new List<OpgaverDage>();
-      public OpgaverDage Mandag = new OpgaverDage();
-      public  OpgaverDage Tirsdag = new OpgaverDage();
-      public OpgaverDage Onsdag= new OpgaverDage();
-      public  OpgaverDage Torsdag = new OpgaverDage();
-      public OpgaverDage Specialdag = new OpgaverDage();
-      public OpgaverDage Name1 = new OpgaverDage();
-      public OpgaverDage Opvasker = new OpgaverDage();
-      public  OpgaverDage HjaelpeKok = new OpgaverDage();
-        public void DageOpgaver()
-        {
-            MySpiseDageList = new List<OpgaverDage>();
-        }
-
-        public class OpgaverDage
-       {
+      //  public class OpgaverDage
+      // {
             
-        public string Mandag { get; set; }
-        public string Tirsdag { get; set; }
-        public string Onsdag { get; set; }
-        public string Torsdag { get; set; }
-        public string Specialdag { get; set; }
-        public string Name { get; set; }
-        public string Opvasker { get; set; }
-        public string HjaelpeKok { get; set; }
+      //  public string Mandag { get; set; }
+      //  public string Tirsdag { get; set; }
+      //  public string Onsdag { get; set; }
+      //  public string Torsdag { get; set; }
+      //  public string Specialdag { get; set; }
+      //  public string Name { get; set; }
+      //  public string Opvasker { get; set; }
+      //  public string HjaelpeKok { get; set; }
            
-        }
+      //  }
 
-
+      
 
 
 

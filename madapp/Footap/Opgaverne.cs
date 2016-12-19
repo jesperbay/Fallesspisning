@@ -13,19 +13,24 @@ namespace Footap
         private string job;
 
         public ObservableCollection<Opgaverne> Opgavernes { get; set; }
-        public string ChefKok { get; set; }
-        public string Opvasker { get; set; }
-        public string Kok { get; set; }
+        
         public string Name { get; set; }
+        public string Job { get; set; }
+        public int Alder { get; set; }
+        public int HusNr { get; set; }
 
-       
-        public Opgaverne(ObservableCollection<Opgaverne> opgavernes, string chefKok, string opvasker, string kok, string name)
+        public Opgaverne(ObservableCollection<Opgaverne> opgavernes, string name, string job, int alder, int husNr)
         {
             Opgavernes = opgavernes;
-            ChefKok = chefKok;
-            Opvasker = opvasker;
-            Kok = kok;
             Name = name;
+            Job = job;
+            Alder = alder;
+            HusNr = husNr;
+        }
+
+        public Opgaverne()
+        {
+            
         }
 
         public Opgaverne(string opgaver)
@@ -37,6 +42,11 @@ namespace Footap
         {
             this.job = job;
         }
-        
+
+        public Opgaverne(string v, string job, int alder, int husNr) : this(v, job)
+        {
+            this.Alder = alder;
+            this.HusNr = husNr;
+        }
     }
 }
